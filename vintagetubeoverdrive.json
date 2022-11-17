@@ -1,0 +1,117 @@
+{
+  "Project" : "urn:brummer:vintagetubeoverdrive_ui",
+  "Base project" : "urn:brummer:vintagetubeoverdrive",
+  "Name" : "vintagetubeoverdrive",
+  "Author" : "brummer",
+  "Window size" : [ 410 , 200 ] ,
+  "Audio Inputs" : 1 ,
+  "Audio Outputs" : 1 ,
+  "MIDI Input" : 0 ,
+  "MIDI Output" : 0 ,
+  "LV2 bypass" : 1 ,
+  "Controls" : 4 ,
+  "Colors" : [
+    {
+      "NORMAL" : [
+        ".fg" :       [ 0.850, 0.850, 0.850, 1.000] ,
+        ".bg" :       [ 0.100, 0.100, 0.100, 1.000] ,
+        ".base" :     [ 0.000, 0.000, 0.000, 1.000] ,
+        ".text" :     [ 0.900, 0.900, 0.900, 1.000] ,
+        ".shadow" :   [ 0.000, 0.000, 0.000, 0.200] ,
+        ".frame" :    [ 0.000, 0.000, 0.000, 1.000] ,
+        ".light" :    [ 0.100, 0.100, 0.100, 1.000] 
+      ] ,
+      "PRELIGHT" : [
+        ".fg" :       [ 1.000, 0.000, 1.000, 1.000] ,
+        ".bg" :       [ 0.250, 0.250, 0.250, 1.000] ,
+        ".base" :     [ 0.300, 0.300, 0.300, 1.000] ,
+        ".text" :     [ 1.000, 1.000, 1.000, 1.000] ,
+        ".shadow" :   [ 0.100, 0.100, 0.100, 0.400] ,
+        ".frame" :    [ 0.300, 0.300, 0.300, 1.000] ,
+        ".light" :    [ 0.300, 0.300, 0.300, 1.000] 
+      ] ,
+      "SELECTED" : [
+        ".fg" :       [ 0.900, 0.900, 0.900, 1.000] ,
+        ".bg" :       [ 0.200, 0.200, 0.200, 1.000] ,
+        ".base" :     [ 0.500, 0.180, 0.180, 1.000] ,
+        ".text" :     [ 1.000, 1.000, 1.000, 1.000] ,
+        ".shadow" :   [ 0.800, 0.180, 0.180, 0.200] ,
+        ".frame" :    [ 0.500, 0.180, 0.180, 1.000] ,
+        ".light" :    [ 0.500, 0.180, 0.180, 1.000] 
+      ] ,
+      "ACTIVE" : [
+        ".fg" :       [ 0.000, 1.000, 1.000, 1.000] ,
+        ".bg" :       [ 0.000, 0.000, 0.000, 1.000] ,
+        ".base" :     [ 0.180, 0.380, 0.380, 1.000] ,
+        ".text" :     [ 0.750, 0.750, 0.750, 1.000] ,
+        ".shadow" :   [ 0.180, 0.380, 0.380, 0.500] ,
+        ".frame" :    [ 0.180, 0.380, 0.380, 1.000] ,
+        ".light" :    [ 0.180, 0.380, 0.380, 1.000] 
+      ] ,
+      "INSENSITIVE" : [
+        ".fg" :       [ 0.850, 0.850, 0.850, 0.500] ,
+        ".bg" :       [ 0.100, 0.100, 0.100, 0.500] ,
+        ".base" :     [ 0.000, 0.000, 0.000, 0.500] ,
+        ".text" :     [ 0.900, 0.900, 0.900, 0.500] ,
+        ".shadow" :   [ 0.000, 0.000, 0.000, 0.100] ,
+        ".frame" :    [ 0.000, 0.000, 0.000, 0.500] ,
+        ".light" :    [ 0.100, 0.100, 0.100, 0.500] 
+      ] ,
+    }
+  ] ,
+  "IS_IMAGE_TOGGLE" : [
+    {
+      "Type" : "add_lv2_image_toggle",
+      "Label" : "Bypass",
+      "Port" : 2 ,
+      "Symbol" : "Bypass",
+      "Size" : [ 61 , 60 , 60 , 78 ] ,
+      "Image" : "resources/switch_gbxc.png",
+    }
+  ] ,
+  "IS_KNOB" : [
+    {
+      "Type" : "add_lv2_knob",
+      "Label" : "DRIVE",
+      "Port" : 3 ,
+      "Symbol" : "DRIVE",
+      "Size" : [ 140 , 60 , 60 , 80 ] ,
+      "Image" : "resources/knob_sprite_caccaebi.png",
+      "Adjustment" : "CL_CONTINUOS",
+      "Default Value" : 0.500000 ,
+      "Min Value" : 0.000000 ,
+      "Max Value" : 1.000000 ,
+      "Step Size" : 0.010000 ,
+    }
+  ] ,
+  "IS_KNOB" : [
+    {
+      "Type" : "add_lv2_knob",
+      "Label" : "TONE",
+      "Port" : 4 ,
+      "Symbol" : "TONE",
+      "Size" : [ 210 , 60 , 60 , 80 ] ,
+      "Image" : "resources/knob_sprite_caccaebi.png",
+      "Adjustment" : "CL_CONTINUOS",
+      "Default Value" : 0.500000 ,
+      "Min Value" : 0.000000 ,
+      "Max Value" : 1.000000 ,
+      "Step Size" : 0.010000 ,
+    }
+  ] ,
+  "IS_KNOB" : [
+    {
+      "Type" : "add_lv2_knob",
+      "Label" : "VOLUME",
+      "Port" : 5 ,
+      "Symbol" : "VOLUME",
+      "Size" : [ 280 , 60 , 60 , 80 ] ,
+      "Image" : "resources/knob_sprite_caccaebi.png",
+      "Adjustment" : "CL_CONTINUOS",
+      "Default Value" : 0.500000 ,
+      "Min Value" : 0.000000 ,
+      "Max Value" : 1.000000 ,
+      "Step Size" : 0.010000 ,
+    }
+  ] 
+}

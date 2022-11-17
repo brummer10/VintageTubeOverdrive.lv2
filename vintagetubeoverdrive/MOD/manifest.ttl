@@ -1,0 +1,8 @@
+
+@prefix lv2:  <http://lv2plug.in/ns/lv2core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+<urn:brummer:vintagetubeoverdrive>
+    a lv2:Plugin ;
+    lv2:binary <vintagetubeoverdrive.so> ;
+    rdfs:seeAlso <vintagetubeoverdrive.ttl> .
+<urn:brummer:vintagetubeoverdrive> rdfs:seeAlso <modgui.ttl> .

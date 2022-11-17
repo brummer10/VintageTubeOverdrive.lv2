@@ -1,0 +1,170 @@
+/* = CONTAINER
+================================================ */
+.mod-pedal-lata{{{cns}}} {
+    background-position: 0 0;
+    background-repeat:no-repeat;
+    height:514px;
+    position:absolute;
+    width:296px;
+    border-radius: 105px;
+}
+
+/* = PLUGIN'S AUTHOR
+================================================ */
+.mod-pedal-lata{{{cns}}} .mod-plugin-brand {
+    left:30px;
+    position:absolute;
+    right:30px;
+    text-align:center;
+    text-transform:uppercase;
+    top:420px;
+}
+
+.mod-pedal-lata{{{cns}}} .mod-plugin-brand h1 {
+    color:#111;
+    font-family:"Nexa";
+    font-size:22px;
+}
+
+/* = PLUGIN'S NAME
+================================================ */
+.mod-pedal-lata{{{cns}}} .mod-plugin-name {
+    left:30px;
+    overflow:hidden;
+    position:absolute;
+    right:30px;
+    text-align:center;
+    top:180px;
+}
+
+.mod-pedal-lata{{{cns}}} .mod-plugin-name h1 {
+    font-family:"Questrial";
+    font-size:30px;
+    color:#666;
+    font-weight: bold;
+    line-height:1;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.mod-pedal-lata{{{cns}}} .mod-plugin-name h2 {
+    font-family:"Questrial";
+    font-size:30px;
+    color:#666;
+    font-weight: bold;
+    line-height:1;
+    margin-top:50px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/* = LIGHT ON/OFF
+================================================ */
+.mod-pedal-lata{{{cns}}} .mod-light {
+    height:32px;
+    left:0;
+    margin:0 auto;
+    position:absolute;
+    right:0;
+    top:260px;
+    width:32px;
+}
+
+/* = FOOTSWITCH
+================================================ */
+.mod-pedal-lata{{{cns}}} .mod-footswitch {
+    background-image:url(/resources/pedals/footswitch.png{{{ns}}});
+    background-position:bottom center;
+    background-repeat:no-repeat;
+    background-size:auto 132px;
+    bottom:156px;
+    cursor:pointer;
+    height:66px;
+    width: 66px;
+    left:13px;
+    margin: auto;
+    position:absolute !important;
+    right:13px;
+    z-index:30;
+}
+.mod-pedal-lata{{{cns}}} .mod-footswitch.on {
+    background-position-y: top !important
+}
+
+/* = INPUTS/OUTPUTS
+================================================ */
+.mod-pedal-lata{{{cns}}} .mod-pedal-input,
+.mod-pedal-lata{{{cns}}} .mod-pedal-output {
+    top:136px;
+}
+
+/* = BACKGROUND IMAGES - Colour of the pedal
+================================================ */
+.mod-pedal-lata{{{cns}}}.mod-white { background-image:url(/resources/pedals/vintage.png{{{ns}}}); }
+
+/* = COLORS - Color of the pedals labels
+================================================ */
+
+.mod-pedal-lata{{{cns}}}.mod-white h1,
+.mod-pedal-lata{{{cns}}}.mod-white .mod-control-group .mod-knob > span.mod-knob-title
+{
+    color:#666;
+}
+
+/* STYLES FOR THE BOXY KNOB */
+
+/* = KNOBS
+================================================ */
+.mod-pedal-lata{{{cns}}} .mod-control-group {
+    height:141px;
+    left:0;
+    position:absolute;
+    right:0;
+    text-align:center;
+    top:36px;
+}
+
+.mod-pedal-lata{{{cns}}} .mod-control-group .mod-knob {
+    display:inline-block;
+    height:100px;
+    margin-top: 20px;
+    position:relative;
+    text-align:center;
+    width:79px;
+}
+
+.mod-pedal-lata{{{cns}}} .mod-control-group .mod-knob .mod-knob-image {
+    background-image:url(/resources/knobs/brown.png{{{ns}}});
+    background-position:left center;
+    background-repeat:no-repeat;
+    background-size:auto 79px;
+    height:79px;
+    position:relative;
+    overflow:hidden;
+    width:79px;
+}
+
+.mod-pedal-lata{{{cns}}}.mod-white .mod-control-group .mod-knob > span.mod-knob-title {
+    color:#666;
+}
+
+.mod-pedal-lata{{{cns}}} .mod-control-group .mod-knob > span.mod-knob-title {
+    bottom:6px;
+    display:block;
+    font-size:14px;
+    font-weight:bold;
+    height:14px;
+    left:0;
+    line-height:1;
+    margin:0;
+    overflow:hidden;
+    padding:0;
+    position:absolute;
+    right:0;
+    text-transform:uppercase;
+}
+
+.mod-pedal-lata{{{cns}}} .mod-control-group {
+    margin:20px;
+    position:relative;
+    text-align:center;
+    z-index:30;
+}
