@@ -60,11 +60,12 @@ private:
 	double fConst25;
 	double fConst26;
 	double fRec5[5];
-	double fRec3[4];
 	double fConst27;
+	double fRec3[4];
 	double fConst28;
-	double fRec1[2];
 	double fConst29;
+	double fRec1[2];
+	double fConst30;
 
 
 public:
@@ -125,9 +126,10 @@ inline void Dsp::init(uint32_t sample_rate)
 	fConst24 = fConst5 * (1.48286134895305e-18 * fConst5 + -2.08441603959944e-13) + 1.43507562386046e-13;
 	fConst25 = fConst0 * (fConst5 * (-2.53579282987245e-15 - fConst19) + 1.91929839977826e-12) + 9.5671708257364e-14;
 	fConst26 = fConst0 * (3.83855367274112e-12 - fConst21);
-	fConst27 = 4.53097450264922e-14 * fConst4;
-	fConst28 = 1.51032483421641e-14 * fConst4;
-	fConst29 = fConst0 / fConst2;
+	fConst27 = 2.0 * fConst4;
+	fConst28 = 4.53097450264922e-14 * fConst4;
+	fConst29 = 1.51032483421641e-14 * fConst4;
+	fConst30 = 2.0 * (fConst0 / fConst2);
 	clear_state_f();
 }
 
@@ -145,9 +147,9 @@ void always_inline Dsp::compute(int count, FAUSTFLOAT *input0, FAUSTFLOAT *outpu
 		fRec4[0] = fSlow2 + 0.993 * fRec4[1];
 		double fTemp0 = fConst16 + fConst14 * fRec4[0] + 4.7835854128682e-14;
 		fRec5[0] = double(input0[i0]) - (fRec5[1] * (fConst26 + fConst25 * fRec4[0] + 1.91343416514728e-13) + fRec5[2] * (fConst24 * fRec4[0] + 2.87015124772092e-13 - fConst23) + fRec5[3] * (fConst22 + fConst20 * fRec4[0] + 1.91343416514728e-13) + fRec5[4] * (fConst18 + fConst17 * fRec4[0] + 4.7835854128682e-14)) / fTemp0;
-		fRec3[0] = fConst4 * ((fRec5[0] * (0.0 - 8.99291504835734e-13 * fRec4[0]) + 1.79858300967147e-12 * fRec4[0] * fRec5[1] + fRec5[3] * (0.0 - 1.79858300967147e-12 * fRec4[0]) + 8.99291504835734e-13 * fRec4[0] * fRec5[4]) / fTemp0) - fConst12 * (fConst11 * fRec3[1] + fConst10 * fRec3[2] + fConst8 * fRec3[3]);
-		fRec1[0] = vintagetubedriver_p2clip(fConst12 * (fRec3[0] * (fConst6 + fConst28 * fRec2[0]) + fRec3[1] * (fConst4 * (0.0 - 4.53097450264922e-14 * fRec2[0]) - fConst6) + fRec3[2] * (fConst27 * fRec2[0] - fConst6) + fRec3[3] * (fConst6 + fConst4 * (0.0 - 1.51032483421641e-14 * fRec2[0])))) - fConst3 * fRec1[1];
-		output0[i0] = FAUSTFLOAT(fConst29 * (fRec1[1] * (0.0 - 2.08330921921294e-05 * fRec0[0]) + 2.08330921921294e-05 * fRec1[0] * fRec0[0]));
+		fRec3[0] = fConst27 * ((fRec5[0] * (0.0 - 8.99291504835734e-13 * fRec4[0]) + 1.79858300967147e-12 * fRec4[0] * fRec5[1] + fRec5[3] * (0.0 - 1.79858300967147e-12 * fRec4[0]) + 8.99291504835734e-13 * fRec4[0] * fRec5[4]) / fTemp0) - fConst12 * (fConst11 * fRec3[1] + fConst10 * fRec3[2] + fConst8 * fRec3[3]);
+		fRec1[0] = vintagetubedriver_p2clip(fConst12 * (fRec3[0] * (fConst6 + fConst29 * fRec2[0]) + fRec3[1] * (fConst4 * (0.0 - 4.53097450264922e-14 * fRec2[0]) - fConst6) + fRec3[2] * (fConst28 * fRec2[0] - fConst6) + fRec3[3] * (fConst6 + fConst4 * (0.0 - 1.51032483421641e-14 * fRec2[0])))) - fConst3 * fRec1[1];
+		output0[i0] = FAUSTFLOAT(fConst30 * (fRec1[1] * (0.0 - 2.08330921921294e-05 * fRec0[0]) + 2.08330921921294e-05 * fRec1[0] * fRec0[0]));
 		fRec0[1] = fRec0[0];
 		fRec2[1] = fRec2[0];
 		fRec4[1] = fRec4[0];
